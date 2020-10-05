@@ -16,8 +16,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 500
-let preferredHeight = 500
+let preferredWidth = 400
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -44,33 +44,59 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
  
  */
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400, borderWidth: 1)
 
+let Limegreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+
+for x in stride(from: 400, through: 0, by: -50)
+{
+for y in stride(from: 400, through: 0, by: -50)
+{
+
+canvas.drawEllipse(at: Point(x: x, y: y), width: 45, height: 45)
+let Limegreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+canvas.drawEllipse(at: Point(x: 400, y: 400), width: 45, height: 45)
+canvas.fillColor = Limegreen
+}
+}
 
 canvas.drawAxes(withScale: true, by: 50)
-for x in stride(from: 0, to: 500, by: 50) {
-//    //code in this block is repeated 10 times
-//    for y in stride(from: 0, to: 500, by: 50) {
-        
-        // create a random size
-//
-//        x
-//        let size = Int.random(in: 25...50)
-//
-//
-//        //draw circle
-//        canvas.drawEllipse(at: Point(x: x + 25, y: y + 25),
-//                           width: size,
-//                           height: size / 2)
-        
-        
-    }
-    
+// Colour Things
+let OffWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
+let LimeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 
+// Borders off
+canvas.drawShapesWithBorders = false
 
+// Background green
+canvas.fillColor = LimeGreen
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+// Background black
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 
-
-
+// Cricles
+canvas.fillColor = LimeGreen
+for y in stride(from: 0, through: 400, by: 40){
+for x in stride(from: 0, through: 400, by: 40){
+//Color whitte Circles
+    if x + y > 400 {
+canvas.fillColor = LimeGreen
+} else if x == 400 {
+canvas.fillColor = LimeGreen
+} else if y == 0 {
+canvas.fillColor = LimeGreen
+} else if y == 400 {
+canvas.fillColor = LimeGreen
+} else {
+canvas.fillColor = OffWhite
+}
+// Cricles Drawing
+canvas.drawEllipse(at: Point(x: x, y: y), width: 35, height: 35)
+}
+}
+canvas.drawAxes(withScale: true, by: 40)
 
 
 
