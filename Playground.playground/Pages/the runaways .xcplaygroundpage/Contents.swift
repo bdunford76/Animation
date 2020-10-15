@@ -21,29 +21,26 @@ canvas.drawShapesWithFill = true
 canvas.fillColor = pink
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 canvas.defaultLineWidth = 15
-//Bottom left
-canvas.lineColor = black
-canvas.drawLine(from: Point(x: 25, y: 25), to: Point(x: 0, y: 25))
-canvas.drawLine(from: Point(x: 25, y: 25), to: Point(x: 25, y: 0))
-canvas.lineColor = beige
-canvas.drawLine(from: Point(x: 50, y: 50), to: Point(x: 50, y: 0))
-canvas.drawLine(from: Point(x: 50, y: 50), to: Point(x: 0, y: 50))
-canvas.lineColor = black
-canvas.drawLine(from: Point(x: 75, y: 75), to: Point(x: 75, y: 0))
-canvas.drawLine(from: Point(x: 75, y: 75), to: Point(x: 0, y: 75))
-canvas.lineColor = beige
-canvas.drawLine(from: Point(x: 100, y: 100), to: Point(x: 0, y: 100))
-canvas.drawLine(from: Point(x: 100, y: 100), to: Point(x: 100, y: 0))
-canvas.lineColor = black
-canvas.drawLine(from: Point(x: 125, y: 125), to: Point(x: 125, y: 0))
-canvas.drawLine(from: Point(x: 125, y: 125), to: Point(x: 0, y: 125))
-canvas.lineColor = beige
-canvas.drawLine(from: Point(x: 150, y: 150), to: Point(x: 150, y: 0))
-canvas.drawLine(from: Point(x: 150, y: 150), to: Point(x: 0, y: 150))
-canvas.lineColor = black
-canvas.drawLine(from: Point(x: 175, y: 175), to: Point(x: 175, y: 0))
-canvas.drawLine(from: Point(x: 175, y: 175), to: Point(x: 0, y: 175))
-canvas.lineColor = black
+
+
+//bottom left with loop
+for size in stride(from: 25, through: 175, by: 25) {
+    
+    // When the size is a multiple of 50 (50 divides into size with a remainder of 0) make the color beige, otherwise make it black
+    if size % 50 == 0 {
+        canvas.lineColor = beige
+    } else {
+        canvas.lineColor = black
+    
+    }
+    
+    
+    canvas.drawLine(from: Point(x: size, y: size), to: Point(x: 0, y: size))
+    canvas.drawLine(from: Point(x: size, y: size), to: Point(x: size, y: 0))
+
+}
+
+
 //Top Left
 canvas.drawLine(from: Point(x: 25, y: 375), to: Point(x: 0, y: 375))
 canvas.drawLine(from: Point(x: 25, y: 375), to: Point(x: 25, y: 400))
@@ -65,7 +62,9 @@ canvas.drawLine(from: Point(x: 150, y: 250), to: Point(x: 0, y: 250))
 canvas.lineColor = black
 canvas.drawLine(from: Point(x: 175, y: 225), to: Point(x: 175, y: 400))
 canvas.drawLine(from: Point(x: 175, y: 225), to: Point(x: 0, y: 225))
-//Top Right
+
+
+//Top left
 canvas.lineColor = black
 canvas.drawLine(from: Point(x: 375, y: 375), to: Point(x: 375, y: 400))
 canvas.drawLine(from: Point(x: 375, y: 375), to: Point(x: 400, y: 375))

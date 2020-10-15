@@ -1,21 +1,3 @@
-//: [Previous](@previous) / [Next](@next)
-//: # Blank canvas to copy
-//:
-//: ## To duplicate this page
-//:
-//: Place your cursor on line 19 of this page, press `Command-A` to select all text, and then `Command-C` to copy.
-//:
-//: Two-finger tap on the playground, then choose **New Playground Page**:
-//:
-//: ![new-playground](new-playground.png "New Playground")
-//:
-//: Move to the new page and press `Command-A` to select all text there, then `Command-V` to paste.
-//:
-/*:
- ## Canvas size
- 
- Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
- */
 let preferredWidth = 475
 let preferredHeight = 475
 /*:
