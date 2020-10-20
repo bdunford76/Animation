@@ -8,13 +8,16 @@ class Sketch: NSObject {
     //       the Sketchable protocol.
     //
     //       Therefore, the line immediately below, or one like it, must always be present.
-    var currentDrawing = BasicSketch()
-
+    //    var currentDrawing = BasicSketch()
+    
     // To try out other included sketches:
     // 1. Comment out the code on line 11.
     // 2. Uncomment one of the lines below.
-//    var currentDrawing = TurtleSketch()
-//    var currentDrawing = AudioInputSketch()
-//    var currentDrawing = StaticSketch()
-
+    //    var currentDrawing = TurtleSketch()
+    //    var currentDrawing = AudioInputSketch()
+    //    var currentDrawing = StaticSketch()
+    //        var currentDrawing = RandomShapes()
+            var currentDrawing = FiveCircles()
+        
+    
 }

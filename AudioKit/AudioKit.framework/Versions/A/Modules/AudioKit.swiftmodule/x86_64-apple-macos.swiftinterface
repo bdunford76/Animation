@@ -7673,3 +7673,4 @@ extension AudioKit.AKMIDISystemCommand : Swift.RawRepresentable {}
 extension AudioKit.AKMIDISystemCommandType : Swift.Equatable {}
 extension AudioKit.AKMIDISystemCommandType : Swift.Hashable {}
 extension AudioKit.AKPeakLimiter : AudioKit.AUComponent {}
+
