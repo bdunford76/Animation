@@ -32,44 +32,33 @@ class FiveCircles: NSObject, Sketchable {
         
         // Create canvas object – specify size
         canvas = Canvas(width: 500, height: 500)
-        
+        canvas.drawShapesWithBorders = false
     }
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
         
-        //The top line circle right
+        
+    
+        //The top line moving right
         x += 1
-        canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
-        canvas.fillColor = Color(hue: 274, saturation: 100, brightness: 100, alpha: 100)
-        
-        //The middle circle going right
-        x1 += 1
-        canvas.drawEllipse(at: Point(x: x, y: 50), width: 40, height: 40)
-        canvas.fillColor = Color(hue: 94, saturation: 0, brightness: 0 ,alpha: 0)
-        
-        //The bottom circle going right
-        x2 += 1
+        canvas.fillColor = Color.purple
         canvas.drawEllipse(at: Point(x: x, y: 450), width: 50, height: 50)
-        canvas.fillColor = Color(hue: 94, saturation: 100, brightness: 100, alpha: 100)
+
+        
+        //The middle line cirlce moving left
+        x1 -= 1
+        canvas.fillColor = Color.orange
+        canvas.drawEllipse(at: Point(x: x1, y: 350), width: 50, height: 50)
         
         
+        //The close to bottom line moving right
+        x2 += 1
+        canvas.fillColor = Color.blue
+        canvas.drawEllipse(at: Point(x: x2, y: 250), width: 50, height: 50)
         
-        //The top circle left
-        x3 -= 1
-        canvas.drawEllipse(at: Point(x: x3, y: 250), width: 50, height: 50)
-        canvas.fillColor = Color(hue: 274, saturation: 100, brightness: 100, alpha: 100)
-        
-        //The middle circle going left
-        x4 -= 1
-        canvas.drawEllipse(at: Point(x: x4, y: 50), width: 50, height: 50)
-        canvas.fillColor = Color(hue: 94, saturation: 0, brightness: 0 ,alpha: 0)
-        
-        //The bottom circle going left
-        x5 -= 1
-        canvas.drawEllipse(at: Point(x: x5, y: 450), width: 50, height: 50)
-        canvas.fillColor = Color(hue: 94, saturation: 100, brightness: 100, alpha: 100)
+    
         
         
         
