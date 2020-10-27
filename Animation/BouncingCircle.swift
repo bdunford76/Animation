@@ -9,7 +9,7 @@
 import Foundation
 import CanvasGraphics
 
-class BasicSketch: NSObject, Sketchable {
+class BouncingCircle: NSObject, Sketchable {
     
     // NOTE: Every sketch must contain an object of type Canvas named 'canvas'
     //       Therefore, the line immediately below must always be present.
@@ -33,12 +33,9 @@ class BasicSketch: NSObject, Sketchable {
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
+    
         
-        // Change position
-        x -= 0
         
-        // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(at: Point(x: x, y: 250), width: 50, height: 50)
         
     }
     

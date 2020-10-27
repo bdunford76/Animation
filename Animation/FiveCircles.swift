@@ -22,12 +22,8 @@ class FiveCircles: NSObject, Sketchable {
     var x2 = 250
     var x3 = 250
     var x4 = 250
-    var x5 = 250
     
-    
-    
-    
-    // This function runs once
+   // This function runs once
     override init() {
         
         // Create canvas object – specify size
@@ -55,19 +51,18 @@ class FiveCircles: NSObject, Sketchable {
         
         //The close to bottom line moving right
         x2 += 1
-        canvas.fillColor = Color.blue
+        canvas.fillColor = Color.green
         canvas.drawEllipse(at: Point(x: x2, y: 250), width: 50, height: 50)
         
-    
+        //The very close to bottom line moving left
+        x3 -= 1
+        canvas.fillColor = Color.blue
+        canvas.drawEllipse(at: Point(x: x3, y: 150), width: 50, height: 50)
         
-        
-        
-        
-        
-        
-        
-        
-        
+        //The bottom line moving right
+        x4 += 1
+        canvas.fillColor = Color.black
+        canvas.drawEllipse(at: Point(x: x4, y: 50), width: 50, height: 50)
         
     }
     

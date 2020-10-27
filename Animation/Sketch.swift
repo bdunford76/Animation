@@ -17,7 +17,8 @@ class Sketch: NSObject {
     //    var currentDrawing = AudioInputSketch()
     //    var currentDrawing = StaticSketch()
     //        var currentDrawing = RandomShapes()
-            var currentDrawing = FiveCircles()
+    //        var currentDrawing = FiveCircles()
+    var currentDrawing = BasicSketch()
         
     
 }
