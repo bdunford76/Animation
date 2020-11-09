@@ -15,7 +15,7 @@ PlaygroundPage.current.liveView = canvas
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
-canvas.drawAxes(withScale: true, by: 50)
+
 //Colour hues
 let blue = Color(hue: 201, saturation: 72, brightness: 85, alpha: 65)
 let offWhite = Color(hue: 208, saturation: 1, brightness: 88, alpha: 100)
@@ -30,7 +30,8 @@ vertices.append(Point (x: 0, y: 600))
 vertices.append(Point (x: 400, y: 600))
 vertices.append(Point (x: 400, y: 0)) // end
 canvas.drawCustomShape(with: vertices)
-
+for step in stride(from: 400, through: 0, by: -50) {
+step
 //diamond 1
 var vertices1: [Point] = [ ] // empty list of vertices
 vertices1.append(Point (x: 50, y: 0)) // start
@@ -46,3 +47,12 @@ canvas.drawCustomShape(with: vertices1)
 
 
 
+
+
+
+
+canvas.drawAxes(withScale: true, by: 50)
+
+
+
+}

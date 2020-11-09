@@ -18,7 +18,7 @@ class Sketch: NSObject {
     //    var currentDrawing = StaticSketch()
     //        var currentDrawing = RandomShapes()
     //        var currentDrawing = FiveCircles()
-    var currentDrawing = skittles()
+    var currentDrawing = spiral()
         
     
 }

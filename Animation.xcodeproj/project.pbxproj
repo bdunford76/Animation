@@ -34,6 +34,8 @@
 		A73B85C3253B386A00D41296 /* RandomShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B85C2253B386A00D41296 /* RandomShapes.swift */; };
 		A73B85C6253DCA7D00D41296 /* FiveCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B85C5253DCA7D00D41296 /* FiveCircles.swift */; };
 		A747B10D25487DF6006762D2 /* skittles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747B10C25487DF6006762D2 /* skittles.swift */; };
+		A763B8E725599E510060F02F /* spiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763B8E625599E510060F02F /* spiral.swift */; };
+		A763B8EA2559A06F0060F02F /* IndivudualSpiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763B8E92559A06F0060F02F /* IndivudualSpiral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		A73B85C2253B386A00D41296 /* RandomShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomShapes.swift; sourceTree = "<group>"; };
 		A73B85C5253DCA7D00D41296 /* FiveCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveCircles.swift; sourceTree = "<group>"; };
 		A747B10C25487DF6006762D2 /* skittles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skittles.swift; sourceTree = "<group>"; };
+		A763B8E625599E510060F02F /* spiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spiral.swift; sourceTree = "<group>"; };
+		A763B8E92559A06F0060F02F /* IndivudualSpiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndivudualSpiral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				81064A1B1C132DA2007ED524 /* Sketch.swift */,
 				81064A1A1C132D69007ED524 /* Support */,
 				814ADAF8248EB34900F80486 /* BasicSketch.swift */,
+				A763B8E92559A06F0060F02F /* IndivudualSpiral.swift */,
+				A763B8E625599E510060F02F /* spiral.swift */,
 				A747B10C25487DF6006762D2 /* skittles.swift */,
 				A72F84C2254309D600870C6F /* BouncingCircle.swift */,
 				A72F84BF25420F6800870C6F /* FourCorners.swift */,
@@ -499,6 +505,7 @@
 				81064A0C1C130A10007ED524 /* ViewController.swift in Sources */,
 				A73B85C3253B386A00D41296 /* RandomShapes.swift in Sources */,
 				81064A1C1C132DA2007ED524 /* Sketch.swift in Sources */,
+				A763B8EA2559A06F0060F02F /* IndivudualSpiral.swift in Sources */,
 				81064A0A1C130A10007ED524 /* AppDelegate.swift in Sources */,
 				A72F84C3254309D600870C6F /* BouncingCircle.swift in Sources */,
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
@@ -512,6 +519,7 @@
 				814ADAFD248EB56900F80486 /* EmptySketch.swift in Sources */,
 				A72F84C025420F6800870C6F /* FourCorners.swift in Sources */,
 				814ADAFF248EB5E300F80486 /* StaticSketch.swift in Sources */,
+				A763B8E725599E510060F02F /* spiral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
