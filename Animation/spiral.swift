@@ -52,7 +52,7 @@ class spiral: NSObject, Sketchable {
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
-
+        canvas.lineColor = Color(hue: <#T##Float#>, saturation: <#T##Float#>, brightness: <#T##Float#>, alpha: <#T##Float#>)
         // What frame are we on?
 //        print(canvas.frameCount)
         
