@@ -7,7 +7,8 @@ import PlaygroundSupport
 import CanvasGraphics
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+//let canvas = Canvas(width: preferredWidth, height: preferredHeight)
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -74,10 +75,14 @@ for step in stride(from: 390, through: 0, by: -50) {
 step
 canvas.drawEllipse(at: Point(x: 200, y: 505), width: step, height: step)
 
-
+    
 //TEXT
-canvas.drawAxes(withScale: true, by: 50)}
-
 canvas.drawText(message: "DIVINCHI", at: Point(x: 90, y: 200), size: 50, kerning: 0)
 
-canvas.drawText(message: "", at: Point(x: 25, y: 85), size: 40, kerning: 0)
+canvas.drawText(message: "$25 per person", at: Point(x: 150, y: 50), size: 15, kerning: 0)
+    
+    canvas.drawText(message: "2020 nov 22nd at 9:05pm", at: Point(x: 115, y: 25), size: 15, kerning: 0)
+
+
+canvas.copyToClipboard()
+}
