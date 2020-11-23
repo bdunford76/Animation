@@ -19,7 +19,7 @@ class Sketch: NSObject {
     //        var currentDrawing = RandomShapes()
     //        var currentDrawing = FiveCircles()
 //            var currentDrawing = Spiral()
-    var currentDrawing = FunctionArt1()
+    var currentDrawing = FunctionArt2()
         
     
 }

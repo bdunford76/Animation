@@ -38,6 +38,7 @@
 		A747B10D25487DF6006762D2 /* skittles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747B10C25487DF6006762D2 /* skittles.swift */; };
 		A763B8E725599E510060F02F /* Spiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763B8E625599E510060F02F /* Spiral.swift */; };
 		A763B8EA2559A06F0060F02F /* IndivudualSpiral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763B8E92559A06F0060F02F /* IndivudualSpiral.swift */; };
+		A7B1EFC12568028F00969DF2 /* FunctionArt2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B1EFC02568028F00969DF2 /* FunctionArt2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		A747B10C25487DF6006762D2 /* skittles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skittles.swift; sourceTree = "<group>"; };
 		A763B8E625599E510060F02F /* Spiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral.swift; sourceTree = "<group>"; };
 		A763B8E92559A06F0060F02F /* IndivudualSpiral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndivudualSpiral.swift; sourceTree = "<group>"; };
+		A7B1EFC02568028F00969DF2 /* FunctionArt2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionArt2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				A73B85C5253DCA7D00D41296 /* FiveCircles.swift */,
 				A74730C925642F8900F45B4B /* MathFunction.swift */,
 				A74730CC2564354800F45B4B /* FunctionArt1.swift */,
+				A7B1EFC02568028F00969DF2 /* FunctionArt2.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				814ADAF5248EAB6A00F80486 /* TurtleSketch.swift in Sources */,
 				A73B85C6253DCA7D00D41296 /* FiveCircles.swift in Sources */,
 				A705F98B2539D976001917FB /* MovingSquare.swift in Sources */,
+				A7B1EFC12568028F00969DF2 /* FunctionArt2.swift in Sources */,
 				814ADAF9248EB34900F80486 /* BasicSketch.swift in Sources */,
 				A74730CA25642F8900F45B4B /* MathFunction.swift in Sources */,
 				814ADAFB248EB45F00F80486 /* AudioInputSketch.swift in Sources */,
