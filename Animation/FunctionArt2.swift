@@ -34,7 +34,7 @@ class FunctionArt2: NSObject, Sketchable {
                                            d: CGFloat(i) * 50 + CGFloat(canvas.width + 10),
                                            c: 12,
                                            canvas: canvas,
-                                           type: .quadratic)
+                                           type: .linear)
             
             // Add it to the list
             linewithlinescomingoutoftheline.append(newFunction)

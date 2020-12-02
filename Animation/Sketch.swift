@@ -16,10 +16,11 @@ class Sketch: NSObject {
     //    var currentDrawing = TurtleSketch()
     //    var currentDrawing = AudioInputSketch()
     //    var currentDrawing = StaticSketch()
-    //        var currentDrawing = RandomShapes()
-    //        var currentDrawing = FiveCircles()
-//            var currentDrawing = Spiral()
-    var currentDrawing = FunctionArt2()
-        
+//            var currentDrawing = RandomShapes()
+//            var currentDrawing = FiveCircles()
+            var currentDrawing = Spiral()
+//    var currentDrawing = Spiral()
+//    var currentDrawing = FunctionArt1()
+
     
 }

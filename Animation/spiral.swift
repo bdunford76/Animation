@@ -26,12 +26,12 @@ class Spiral: NSObject, Sketchable {
         canvas = Canvas(width: 1500, height: 800)
              
         // Initialize many spirals
-        for i in 10...70 {
+        for i in 10...20 {
             
             // Give the one spiral a starting angle of rotation
             let spiral = IndividualSpiral(angleOffset: 24 * 12 * i,
-                                          hue: 150 * Float(i))
-            
+                                          hue: 200 * Float(i))
+           
             // Add the new spiral to the list
             spirals.append(spiral)
         }
@@ -46,11 +46,12 @@ class Spiral: NSObject, Sketchable {
         // What frame are we on?
 //        print(canvas.frameCount)
         // BAckground color
-        let deepRed = Color(hue: 5, saturation: 85, brightness: 0, alpha: 100)
-        canvas.fillColor = deepRed
-        canvas.drawRectangle(at: Point(x: 1, y: 1), width: 1500, height: 800)
+//        let deepRed = Color(hue: 5, saturation: 85, brightness: 0, alpha: 100)
+//        canvas.fillColor = deepRed
+//        canvas.drawRectangle(at: Point(x: 1, y: 1), width: 1500, height: 800)
         
-        canvas.defaultLineWidth = 10
+        canvas.defaultLineWidth = 150
+    
         
         // Set the origin to be the middle of the canvas
         canvas.translate(to: Point(x: canvas.width / 2, y: canvas.height / 2 ))

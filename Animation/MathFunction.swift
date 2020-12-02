@@ -16,8 +16,12 @@ enum FunctionType {
     case absoluteValue
     case exponential
     case reciprocal
-    
-    
+    case sine
+}
+
+enum ShapeType {
+    case none
+    case star
 }
 
 // Define a class that creates a spiral
@@ -36,6 +40,8 @@ class MathFunction {
     var c: CGFloat    // Verticle shift
     var type: FunctionType // tell us what shape / math function to use
     var delayInSecond: Int // How much of a delay to have before the animation begins
+    var shapeType: ShapeType   //what shape to draw
+    
     // 2. Initializer
     //
     //    An initializer has one job: give each property an initial
@@ -46,7 +52,8 @@ class MathFunction {
          c: CGFloat,
          canvas: Canvas,
          type: FunctionType,
-         delayInSecond: Int = 0) {
+         delayInSecond: Int = 0,
+         shapeType: ShapeType = .none) {
 
         // I want every spiral to begin at the same position
         self.lastPoint = Point(x: -1 * canvas.width / 2 * 5, y: 7)
@@ -58,6 +65,7 @@ class MathFunction {
         self.c = c
         self.type = type
         self.delayInSecond = delayInSecond
+        self.shapeType = shapeType
     }
     
     // 3. Methods
@@ -79,7 +87,7 @@ class MathFunction {
             }
             
             // Start drawing after the first frame
-            if x > 0 && x < canvas.width {
+            if x > 3 && x < canvas.width {
 
                 // Determine the next x position
                 let nextX: CGFloat = CGFloat(x - canvas.width / 2)
@@ -92,7 +100,7 @@ class MathFunction {
                 case .linear:
                     nextY = a * ((nextX - d) / k)  + c
                 case .quadratic:
-                    nextY = a * pow((nextX - d) / k, 1.0) + c
+                    nextY = a * pow((nextX - d) / k, 2.0) + c
                 case .cubic:
                     nextY = a * pow((nextX - d) / k, 1.0) + c
                 case .squareRoot:
@@ -102,8 +110,10 @@ class MathFunction {
                 case .exponential:
                     nextY = a * exp((nextX - d) / k) + c
                 case .reciprocal:
-                    nextY = a * 1.0/((nextX - d) / k) + c
-               
+                    nextY = a * 2.0/((nextX - d) / k) + c
+                case .sine:
+                    nextY = a * sin((nextX.asRadians() - d) / k) + c
+
                 }
                
 
@@ -114,10 +124,35 @@ class MathFunction {
     //            print(nextPoint)
                 
                 
-                canvas.lineColor = Color(hue: Int.random(in: 240...280), saturation: Int.random(in: 75...100), brightness: Int.random(in: 80...100), alpha: Int.random(in: 0...100))
+                canvas.lineColor = Color(hue: Int.random(in: 180...280), saturation: Int.random(in: 75...100), brightness: Int.random(in: 80...100), alpha: Int.random(in: 0...100))
 
-                // Draw a line from the last point to the next point
-                canvas.drawLine(from: lastPoint, to: nextPoint)
+                // DRaw shapes or just draw the function
+                if shapeType == .none {
+                    
+                    // Draw a line from the last point to the next point
+                    canvas.drawLine(from: lastPoint, to: nextPoint)
+                    
+                } else if shapeType == .star {
+                    
+//                    // Yellow color
+//                    canvas.fillColor = Color(hue: 274, saturation: 100, brightness: 75, alpha: 80)
+                   
+                   
+            canvas.fillColor = Color(hue: Int.random(in: 180...280), saturation: Int.random(in: 75...100), brightness: Int.random(in: 80...100), alpha: Int.random(in: 0...100))
+                    
+                    var star: [Point] = []
+                    star.append(Point(x: nextX + 0, y: nextY - 50))
+                    star.append(Point(x: nextX + 14, y: nextY - 20))
+                    star.append(Point(x: nextX + 47, y: nextY - 15))
+                    star.append(Point(x: nextX + 23, y: nextY + 7))
+                    star.append(Point(x: nextX + 29, y: nextY + 40))
+                    star.append(Point(x: nextX + 0, y: nextY + 25))
+                    star.append(Point(x: nextX - 29, y: nextY + 40))
+                    star.append(Point(x: nextX - 23, y: nextY + 7))
+                    star.append(Point(x: nextX - 47, y: nextY - 15))
+                    star.append(Point(x: nextX - 14, y: nextY - 20))
+                    canvas.drawCustomShape(with: star)
+                }
 
                 // Set the "new" last point, now that the line is drawn
                 lastPoint = nextPoint
